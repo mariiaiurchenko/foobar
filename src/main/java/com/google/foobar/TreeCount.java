@@ -45,9 +45,7 @@ public class TreeCount {
 		BigDecimal count = BigDecimal.ZERO;
 		for (int i = 1; i <= vertices - trees + 1; i++) {
 			BigDecimal posibleTrees = numberOfPosibleTree(i);
-			BigDecimal coeff = BigDecimal.ONE;// BigDecimal.valueOf(i);//
-												// binomialCoeff(vertices -
-												// 1, i - 1);
+			BigDecimal coeff = BigDecimal.ONE;
 			BigDecimal groupTrees = numberOfGroupTrees(vertices - i, trees - 1);
 			count = count
 					.add(posibleTrees.multiply(coeff).multiply(groupTrees));
